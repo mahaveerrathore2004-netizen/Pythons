@@ -1,64 +1,24 @@
-a = int(input("Enter a Number:"))
-b = int(input("Enter a Number:"))
-print(a + b)
-print(a - b)
-print(a * b)
-print(a / b)
-print(a // b)
-print(a % b)
-print(a ** b)
+import random
 
-"""from tkinter import *
+num = random.randint(1, 10)
 
-def click(value):
-    current = entry.get()
-    entry.delete(0, END)
-    entry.insert(END, current + str(value))
+tries = 0
 
-def clear():
-    entry.delete(0, END)
+while True:
+    guess = int(input("please guess your number between 1 and 10 :"))
+    if num == guess:
+        tries += 1
+        print(f"you are right you guessed the number is {tries} tries")
+        break
 
-def calculate():
-    try:
-        result = eval(entry.get())
-        entry.delete(0, END)
-        entry.insert(END, result)
-    except:
-        entry.delete(0, END)
-        entry.insert(END, "Error")
+    elif num < guess:
+        print("go a little lower")
+        tries += 1
 
-# Main window
-root = Tk()
-root.title("Calculator")
-root.geometry("300x400")
+    elif num > guess:
+        print("go a little higher")
+        tries += 1
 
-# Display
-entry = Entry(root, width=20, font=("Arial", 20), bd=5, justify="right")
-entry.grid(row=0, column=0, columnspan=4)
-
-# Buttons layout
-buttons = [
-    "7", "8", "9", "/",
-    "4", "5", "6", "*",
-    "1", "2", "3", "-",
-    "0", ".", "=", "+",
-]
-
-row = 1
-col = 0
-
-for button in buttons:
-    if button == "=":
-        Button(root, text=button, width=6, height=2, command=calculate).grid(row=row, column=col)
     else:
-        Button(root, text=button, width=6, height=2, command=lambda b=button: click(b)).grid(row=row, column=col)
-
-    col += 1
-    if col > 3:
-        col = 0
-        row += 1
-
-# Clear button
-Button(root, text="C", width=26, height=2, command=clear).grid(row=row, column=0, columnspan=4)
-
-root.mainloop()"""
+        tries += 1
+        print("sorry you are wrong")          
