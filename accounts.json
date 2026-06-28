@@ -1,0 +1,19 @@
+{
+    "1673952155": {
+        "account_number": "1673952155",
+        "name": "Mahaveer Singh",
+        "pin_hash": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+        "account_type": "Savings",
+        "balance": 50000000.0,
+        "transactions": [
+            {
+                "type": "INITIAL DEPOSIT",
+                "amount": 50000000.0,
+                "balance_after": 50000000.0,
+                "note": "",
+                "time": "2026-06-28 11:16:56"
+            }
+        ],
+        "created_at": "2026-06-28 11:16:56"
+    }
+}
